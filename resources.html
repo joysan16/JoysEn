@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Resource Center — JoyEn Incubator Association</title>
+<meta name="description" content="Free startup guides, templates, government scheme reports, and learning materials for Indian founders." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,700&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo"><span class="nex">Joy</span><span class="gen">En</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="network.html">Network</a></li>
+      <li><a href="programs.html">Programs</a></li>
+      <li><a href="mentors.html">Mentors</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="resources.html" class="active">Resources</a></li>
+      <li><a href="stories.html">Stories</a></li>
+      <li><a href="contact.html" class="btn-nav">Join Now</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Resource Center</span></div>
+    <h1>Everything you need to build smarter.</h1>
+    <p>Free guides, templates, government scheme reports, and learning materials — curated specifically for Indian founders.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="resource-cats fade-in" id="resCats">
+      <button class="tab active" data-c="all" onclick="filterRes('all')">All Resources</button>
+      <button class="tab" data-c="Legal" onclick="filterRes('Legal')">Legal & Compliance</button>
+      <button class="tab" data-c="Fundraising" onclick="filterRes('Fundraising')">Fundraising</button>
+      <button class="tab" data-c="Government" onclick="filterRes('Government')">Government Schemes</button>
+      <button class="tab" data-c="Learning" onclick="filterRes('Learning')">Learning</button>
+    </div>
+
+    <div class="resources-grid fade-in" id="resGrid">
+
+      <div class="resource-card" data-cat="Legal">
+        <div class="res-icon-box" style="background:#eef2ff;">📘</div>
+        <h4>Startup Starter Kit</h4>
+        <p class="desc">Registration, GST, compliance & legal essentials for first-time founders in India.</p>
+        <div class="meta-row"><span>PDF · 24 pages</span><a href="#" class="dl">Download →</a></div>
+      </div>
+
+      <div class="resource-card" data-cat="Fundraising">
+        <div class="res-icon-box" style="background:#fef3c7;">📊</div>
+        <h4>Pitch Deck Template</h4>
+        <p class="desc">Investor-ready 12-slide deck used by 100+ funded startups in our network.</p>
+        <div class="meta-row"><span>PPTX · Editable</span><a href="#" class="dl">Download →</a></div>
+      </div>
+
+      <div class="resource-card" data-cat="Legal">
+        <div class="res-icon-box" style="background:#fee2e2;">⚖️</div>
+        <h4>Equity & Cap Table Guide</h4>
+        <p class="desc">Understand dilution, ESOP pools, and how to structure your equity splits correctly.</p>
+        <div class="meta-row"><span>PDF · 18 pages</span><a href="#" class="dl">Download →</a></div>
+      </div>
+
+      <div class="resource-card" data-cat="Government">
+        <div class="res-icon-box" style="background:#dcfce7;">🏛️</div>
+        <h4>Government Schemes 2025</h4>
+        <p class="desc">Complete guide to DPIIT, Startup India, and state-level government funding schemes.</p>
+        <div class="meta-row"><span>PDF · 40 pages</span><a href="#" class="dl">Download →</a></div>
+      </div>
+
+      <div class="resource-card" data-cat="Learning">
+        <div class="res-icon-box" style="background:#dbeafe;">🎓</div>
+        <h4>Learning Library</h4>
+        <p class="desc">200+ video sessions, webinars, and masterclasses from top industry leaders.</p>
+        <div class="meta-row"><span>Video · On-demand</span><a href="#" class="dl">Browse →</a></div>
+      </div>
+
+      <div class="resource-card" data-cat="Legal">
+        <div class="res-icon-box" style="background:#fae8ff;">📋</div>
+        <h4>Legal Document Templates</h4>
+        <p class="desc">Standard SAFE notes, convertible notes, and equity round agreement templates.</p>
+        <div class="meta-row"><span>DOCX · Editable</span><a href="#" class="dl">Download →</a></div>
+      </div>
+
+      <div class="resource-card" data-cat="Fundraising">
+        <div class="res-icon-box" style="background:#fef3c7;">💰</div>
+        <h4>Financial Model Template</h4>
+        <p class="desc">3-year revenue, burn rate, and runway model built for early-stage SaaS and D2C startups.</p>
+        <div class="meta-row"><span>XLSX · Editable</span><a href="#" class="dl">Download →</a></div>
+      </div>
+
+      <div class="resource-card" data-cat="Government">
+        <div class="res-icon-box" style="background:#dcfce7;">📜</div>
+        <h4>DPIIT Registration Guide</h4>
+        <p class="desc">Step-by-step walkthrough for Startup India recognition and associated tax benefits.</p>
+        <div class="meta-row"><span>PDF · 12 pages</span><a href="#" class="dl">Download →</a></div>
+      </div>
+
+      <div class="resource-card" data-cat="Learning">
+        <div class="res-icon-box" style="background:#dbeafe;">🎙️</div>
+        <h4>Founder Interview Series</h4>
+        <p class="desc">In-depth conversations with founders who scaled through our ecosystem — lessons and mistakes.</p>
+        <div class="meta-row"><span>Podcast · 30 episodes</span><a href="#" class="dl">Listen →</a></div>
+      </div>
+
+      <div class="resource-card" data-cat="Fundraising">
+        <div class="res-icon-box" style="background:#fef3c7;">🤝</div>
+        <h4>Investor Outreach Tracker</h4>
+        <p class="desc">A ready-to-use spreadsheet for tracking VC outreach, follow-ups, and term sheet comparisons.</p>
+        <div class="meta-row"><span>XLSX · Template</span><a href="#" class="dl">Download →</a></div>
+      </div>
+
+      <div class="resource-card" data-cat="Government">
+        <div class="res-icon-box" style="background:#dcfce7;">🌾</div>
+        <h4>Sector-Specific Grants Directory</h4>
+        <p class="desc">Curated list of grants for AgriTech, HealthTech, CleanTech, and EdTech startups.</p>
+        <div class="meta-row"><span>PDF · 30 pages</span><a href="#" class="dl">Download →</a></div>
+      </div>
+
+      <div class="resource-card" data-cat="Learning">
+        <div class="res-icon-box" style="background:#dbeafe;">📈</div>
+        <h4>Growth Metrics Cheat Sheet</h4>
+        <p class="desc">The 12 metrics every early-stage founder should track — and how to calculate each one.</p>
+        <div class="meta-row"><span>PDF · 6 pages</span><a href="#" class="dl">Download →</a></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section section-soft">
+  <div class="container">
+    <div class="cta-banner fade-in">
+      <h2>Can't find what you need?</h2>
+      <p>Our team can point you to the right resource, mentor, or program for your specific situation.</p>
+      <a href="contact.html" class="btn btn-secondary">Ask Our Team</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo"><span class="nex">Nex</span><span class="gen">Gen</span></span>
+        <p>India's leading incubator association, connecting startups, mentors, and investors to build a world-class innovation ecosystem.</p>
+        <div class="social-links"><a href="#">𝕏</a><a href="#">in</a><a href="#">▶</a><a href="#">📸</a></div>
+      </div>
+      <div class="footer-col"><h5>Association</h5><a href="about.html">About Us</a><a href="network.html">Our Network</a><a href="programs.html">Programs</a><a href="events.html">Events</a></div>
+      <div class="footer-col"><h5>Support</h5><a href="mentors.html">Find a Mentor</a><a href="resources.html">Resources</a><a href="stories.html">Success Stories</a><a href="contact.html">Contact</a></div>
+      <div class="footer-col"><h5>Get Involved</h5><a href="contact.html">Join as Startup</a><a href="mentors.html">Become a Mentor</a><a href="contact.html">Partner With Us</a></div>
+      <div class="footer-col"><h5>Legal</h5><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Annual Report</a></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 JoyEn Incubator Association. All rights reserved.</p>
+      <p>Registered under Section 8 Company Act, MCA India.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  function filterRes(cat) {
+    document.querySelectorAll('#resCats .tab').forEach(t => t.classList.toggle('active', t.dataset.c === cat));
+    document.querySelectorAll('#resGrid .resource-card').forEach(card => {
+      card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
+    });
+  }
+</script>
+</body>
+</html>

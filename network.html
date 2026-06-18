@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Incubator Network — JoyEn Incubator Association</title>
+<meta name="description" content="Explore JoyEn's network of 48 university, corporate, and government-backed incubators across India." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,700&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo"><span class="nex">Joy</span><span class="gen">En</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="network.html" class="active">Network</a></li>
+      <li><a href="programs.html">Programs</a></li>
+      <li><a href="mentors.html">Mentors</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="stories.html">Stories</a></li>
+      <li><a href="contact.html" class="btn-nav">Join Now</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Incubator Network</span></div>
+    <h1>48 incubators. One powerful ecosystem.</h1>
+    <p>From IIT research parks to corporate innovation labs — explore the institutions that make up India's most connected incubation network.</p>
+    <div class="stats-row">
+      <div class="stat-box"><span class="num">48</span><span class="lbl">Total Incubators</span></div>
+      <div class="stat-box"><span class="num">22</span><span class="lbl">University-led</span></div>
+      <div class="stat-box"><span class="num">17</span><span class="lbl">Corporate</span></div>
+      <div class="stat-box"><span class="num">9</span><span class="lbl">Government-backed</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="directory-toolbar fade-in">
+      <div class="search-box">
+        <span class="icon">🔍</span>
+        <input type="text" id="incSearch" placeholder="Search by name, city, or sector..." oninput="filterIncubators()" />
+      </div>
+      <div class="filter-tabs" id="filterTabs">
+        <button class="tab active" data-filter="all" onclick="setFilter('all')">All</button>
+        <button class="tab" data-filter="university" onclick="setFilter('university')">University</button>
+        <button class="tab" data-filter="corporate" onclick="setFilter('corporate')">Corporate</button>
+        <button class="tab" data-filter="government" onclick="setFilter('government')">Government</button>
+      </div>
+    </div>
+
+    <div class="incubator-grid" id="incubatorGrid">
+
+      <div class="incubator-card" data-type="university" data-search="iit madras research park chennai deeptech hardware">
+        <div class="inc-top"><div class="inc-logo">IIT-M</div><span class="inc-rank">⭐ Top Ranked</span></div>
+        <h4>IIT Madras Research Park</h4>
+        <p class="desc">India's first university-based research park, focused on deep tech and engineering startups with world-class lab access.</p>
+        <div class="inc-tags"><span>DeepTech</span><span>Hardware</span><span>R&D</span></div>
+        <div class="inc-meta"><span>🏢 Chennai</span><span>📅 Est. 2010</span></div>
+      </div>
+
+      <div class="incubator-card" data-type="university" data-search="nsrcel iim bangalore fintech social impact">
+        <div class="inc-top"><div class="inc-logo">NSRCEL</div><span class="inc-rank">⭐ Premier</span></div>
+        <h4>NSRCEL — IIM Bangalore</h4>
+        <p class="desc">Business innovation and social enterprise incubator with strong investor and alumni network access.</p>
+        <div class="inc-tags"><span>FinTech</span><span>SocialImpact</span><span>B2B</span></div>
+        <div class="inc-meta"><span>🏢 Bangalore</span><span>📅 Est. 2002</span></div>
+      </div>
+
+      <div class="incubator-card" data-type="corporate" data-search="t-hub hyderabad ai ml enterprise govtech">
+        <div class="inc-top"><div class="inc-logo">T-Hub</div><span class="inc-rank">⭐ Flagship</span></div>
+        <h4>T-Hub Hyderabad</h4>
+        <p class="desc">India's largest startup incubator, government-backed with strong enterprise and AI/ML sector focus.</p>
+        <div class="inc-tags"><span>AI/ML</span><span>Enterprise</span><span>GovTech</span></div>
+        <div class="inc-meta"><span>🏢 Hyderabad</span><span>📅 Est. 2015</span></div>
+      </div>
+
+      <div class="incubator-card" data-type="government" data-search="siic iit kanpur cleantech medtech defense dst funded">
+        <div class="inc-top"><div class="inc-logo">SIIC</div><span class="inc-rank">⭐ DST Funded</span></div>
+        <h4>SIIC — IIT Kanpur</h4>
+        <p class="desc">Government-backed deep innovation center with DST funding focused on hard-tech and frontier sectors.</p>
+        <div class="inc-tags"><span>CleanTech</span><span>MedTech</span><span>Defense</span></div>
+        <div class="inc-meta"><span>🏢 Kanpur</span><span>📅 Est. 2000</span></div>
+      </div>
+
+      <div class="incubator-card" data-type="corporate" data-search="cie iiit hyderabad saas cybersecurity cloud">
+        <div class="inc-top"><div class="inc-logo">CIE</div><span class="inc-rank">⭐ Active</span></div>
+        <h4>Centre for Innovation & Entrepreneurship</h4>
+        <p class="desc">IIIT Hyderabad's hub for cybersecurity, SaaS, and cloud-native startups with strong technical mentorship.</p>
+        <div class="inc-tags"><span>SaaS</span><span>Cybersecurity</span><span>Cloud</span></div>
+        <div class="inc-meta"><span>🏢 Hyderabad</span><span>📅 Est. 2013</span></div>
+      </div>
+
+      <div class="incubator-card" data-type="university" data-search="fitt iit delhi biotech agritech energytech">
+        <div class="inc-top"><div class="inc-logo">FITT</div><span class="inc-rank">⭐ Pioneer</span></div>
+        <h4>FITT — IIT Delhi</h4>
+        <p class="desc">Technology transfer and commercialization hub for breakthrough academic research in biotech and energy.</p>
+        <div class="inc-tags"><span>BioTech</span><span>AgriTech</span><span>EnergyTech</span></div>
+        <div class="inc-meta"><span>🏢 Delhi</span><span>📅 Est. 1992</span></div>
+      </div>
+
+      <div class="incubator-card" data-type="government" data-search="venture center pune deeptech materials manufacturing">
+        <div class="inc-top"><div class="inc-logo">VC</div><span class="inc-rank">⭐ CSIR Backed</span></div>
+        <h4>Venture Center, Pune</h4>
+        <p class="desc">CSIR-NCL backed incubator specializing in materials science, manufacturing, and deep science startups.</p>
+        <div class="inc-tags"><span>Materials</span><span>Manufacturing</span><span>DeepTech</span></div>
+        <div class="inc-meta"><span>🏢 Pune</span><span>📅 Est. 2007</span></div>
+      </div>
+
+      <div class="incubator-card" data-type="corporate" data-search="reliance foundation jio mumbai consumer tech d2c">
+        <div class="inc-top"><div class="inc-logo">RJio</div><span class="inc-rank">⭐ Active</span></div>
+        <h4>Reliance Innovation Hub</h4>
+        <p class="desc">Corporate-backed accelerator for consumer tech and D2C startups with retail distribution access.</p>
+        <div class="inc-tags"><span>D2C</span><span>Retail</span><span>ConsumerTech</span></div>
+        <div class="inc-meta"><span>🏢 Mumbai</span><span>📅 Est. 2019</span></div>
+      </div>
+
+      <div class="incubator-card" data-type="university" data-search="bits pilani gravitas rajasthan robotics iot hardware">
+        <div class="inc-top"><div class="inc-logo">BITS</div><span class="inc-rank">⭐ Growing</span></div>
+        <h4>BITS Pilani Gravitas</h4>
+        <p class="desc">Student-led incubator with strong focus on robotics, IoT, and hardware prototyping support.</p>
+        <div class="inc-tags"><span>Robotics</span><span>IoT</span><span>Hardware</span></div>
+        <div class="inc-meta"><span>🏢 Pilani</span><span>📅 Est. 2014</span></div>
+      </div>
+
+      <div class="incubator-card" data-type="government" data-search="startup odisha bhubaneswar agritech rural fintech">
+        <div class="inc-top"><div class="inc-logo">SOdisha</div><span class="inc-rank">⭐ State Backed</span></div>
+        <h4>Startup Odisha Hub</h4>
+        <p class="desc">State government incubator focused on rural fintech, agritech, and tier-2/3 city startup support.</p>
+        <div class="inc-tags"><span>AgriTech</span><span>RuralFinTech</span><span>Tier-2/3</span></div>
+        <div class="inc-meta"><span>🏢 Bhubaneswar</span><span>📅 Est. 2018</span></div>
+      </div>
+
+      <div class="incubator-card" data-type="corporate" data-search="zoho startup studio chennai saas bootstrap">
+        <div class="inc-top"><div class="inc-logo">ZSS</div><span class="inc-rank">⭐ Active</span></div>
+        <h4>Zoho Startup Studio</h4>
+        <p class="desc">Bootstrap-friendly corporate incubator focused on profitable SaaS companies, no forced equity dilution.</p>
+        <div class="inc-tags"><span>SaaS</span><span>Bootstrap</span><span>B2B</span></div>
+        <div class="inc-meta"><span>🏢 Chennai</span><span>📅 Est. 2020</span></div>
+      </div>
+
+      <div class="incubator-card" data-type="university" data-search="amrita university kerala healthtech medtech women">
+        <div class="inc-top"><div class="inc-logo">AMR</div><span class="inc-rank">⭐ Active</span></div>
+        <h4>Amrita TBI</h4>
+        <p class="desc">Technology Business Incubator with a dedicated women-founder track and healthtech focus.</p>
+        <div class="inc-tags"><span>HealthTech</span><span>MedTech</span><span>WomenFounders</span></div>
+        <div class="inc-meta"><span>🏢 Kerala</span><span>📅 Est. 2011</span></div>
+      </div>
+
+    </div>
+
+    <p id="noResults" style="display:none;text-align:center;color:var(--text-muted);padding:3rem 0;">No incubators match your search. Try a different keyword or filter.</p>
+
+  </div>
+</section>
+
+<section class="section section-soft">
+  <div class="container">
+    <div class="cta-banner fade-in">
+      <h2>Run an incubator? Join our network.</h2>
+      <p>Get access to our mentor pool, co-funding opportunities, and a national platform for your founders.</p>
+      <a href="contact.html" class="btn btn-secondary">Apply to Join</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo"><span class="nex">Nex</span><span class="gen">Gen</span></span>
+        <p>India's leading incubator association, connecting startups, mentors, and investors to build a world-class innovation ecosystem.</p>
+        <div class="social-links"><a href="#">𝕏</a><a href="#">in</a><a href="#">▶</a><a href="#">📸</a></div>
+      </div>
+      <div class="footer-col"><h5>Association</h5><a href="about.html">About Us</a><a href="network.html">Our Network</a><a href="programs.html">Programs</a><a href="events.html">Events</a></div>
+      <div class="footer-col"><h5>Support</h5><a href="mentors.html">Find a Mentor</a><a href="resources.html">Resources</a><a href="stories.html">Success Stories</a><a href="contact.html">Contact</a></div>
+      <div class="footer-col"><h5>Get Involved</h5><a href="contact.html">Join as Startup</a><a href="mentors.html">Become a Mentor</a><a href="contact.html">Partner With Us</a></div>
+      <div class="footer-col"><h5>Legal</h5><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Annual Report</a></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 JoyEn Incubator Association. All rights reserved.</p>
+      <p>Registered under Section 8 Company Act, MCA India.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  let currentFilter = 'all';
+  function setFilter(f) {
+    currentFilter = f;
+    document.querySelectorAll('#filterTabs .tab').forEach(t => t.classList.toggle('active', t.dataset.filter === f));
+    filterIncubators();
+  }
+  function filterIncubators() {
+    const q = document.getElementById('incSearch').value.toLowerCase().trim();
+    const cards = document.querySelectorAll('#incubatorGrid .incubator-card');
+    let visibleCount = 0;
+    cards.forEach(card => {
+      const matchesFilter = currentFilter === 'all' || card.dataset.type === currentFilter;
+      const matchesSearch = !q || card.dataset.search.includes(q);
+      const show = matchesFilter && matchesSearch;
+      card.classList.toggle('hidden', !show);
+      if (show) visibleCount++;
+    });
+    document.getElementById('noResults').style.display = visibleCount === 0 ? 'block' : 'none';
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact & Membership — JoyEn Incubator Association</title>
+<meta name="description" content="Apply for membership, contact our team, or inquire about partnerships with JoyEn Incubator Association." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,700&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo"><span class="nex">Joy</span><span class="gen">En</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="network.html">Network</a></li>
+      <li><a href="programs.html">Programs</a></li>
+      <li><a href="mentors.html">Mentors</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="stories.html">Stories</a></li>
+      <li><a href="contact.html" class="btn-nav active">Join Now</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Contact & Membership</span></div>
+    <h1>Ready to join the ecosystem?</h1>
+    <p>Apply for membership, reach out to our team, or inquire about partnerships — we usually respond within 48 hours.</p>
+  </div>
+</section>
+
+<!-- MEMBERSHIP + CONTACT -->
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+
+      <div class="form-box fade-in">
+        <h3>Membership Registration</h3>
+        <form id="membershipForm" onsubmit="handleForm(event)">
+          <div class="form-group"><label>Full Name *</label><input type="text" placeholder="Your name" required /></div>
+          <div class="form-group"><label>Email Address *</label><input type="email" placeholder="your@email.com" required /></div>
+          <div class="form-group"><label>Phone Number</label><input type="tel" placeholder="+91 XXXXX XXXXX" /></div>
+          <div class="form-group">
+            <label>I want to join as *</label>
+            <select required>
+              <option value="">Select role</option>
+              <option>Startup Founder</option>
+              <option>Mentor / Expert</option>
+              <option>Investor</option>
+              <option>Incubator Member</option>
+              <option>Corporate Partner</option>
+            </select>
+          </div>
+          <div class="form-group"><label>Startup / Organization Name</label><input type="text" placeholder="Company name (if applicable)" /></div>
+          <div class="form-group"><label>Tell us about yourself</label><textarea placeholder="Brief description of your background or startup idea..." rows="3"></textarea></div>
+          <button type="submit" class="btn btn-primary btn-full">Submit Application</button>
+        </form>
+        <div class="form-success" id="formSuccess">
+          <div class="success-icon">✅</div>
+          <h4>Application Received!</h4>
+          <p>We'll reach out within 48 hours. Welcome to the JoyEn ecosystem!</p>
+        </div>
+      </div>
+
+      <div>
+        <div class="contact-method fade-in">
+          <span class="ci-icon">📧</span>
+          <div><strong>General Inquiries</strong><p>hello@joyenincubator.in</p></div>
+        </div>
+        <div class="contact-method fade-in">
+          <span class="ci-icon">📞</span>
+          <div><strong>Phone</strong><p>+91 80 4567 8900</p></div>
+        </div>
+        <div class="contact-method fade-in">
+          <span class="ci-icon">📍</span>
+          <div><strong>Headquarters</strong><p>T-Hub, IIIT Hyderabad Campus,<br/>Gachibowli, Hyderabad — 500032</p></div>
+        </div>
+
+        <div class="form-box fade-in" style="margin-top:1.5rem;box-shadow:var(--shadow-sm);">
+          <h3 style="font-size:1.15rem;">Partnership Inquiry</h3>
+          <p style="font-size:.85rem;margin-bottom:1.3rem;">Collaborate as a corporate sponsor, government body, or academic institution.</p>
+          <form onsubmit="handlePartnership(event)">
+            <div class="form-group"><input type="text" placeholder="Organization name" required /></div>
+            <div class="form-group"><input type="email" placeholder="Contact email" required /></div>
+            <div class="form-group">
+              <select>
+                <option>Corporate Sponsorship</option>
+                <option>Academic Partnership</option>
+                <option>Government Collaboration</option>
+                <option>Event Partnership</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-secondary btn-full">Send Partnership Inquiry</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section-soft">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-tag">FAQ</span>
+      <h2>Common questions</h2>
+    </div>
+    <div style="max-width:680px;margin:0 auto;" class="fade-in">
+      <details class="faq-item" open>
+        <summary>Is there a cost to join as a startup?</summary>
+        <p>Pre-Incubation is completely free. The Incubation Program is equity-based (typically 2-5%), while Acceleration uses a performance-linked fee. Our Social Innovation track is grant-based with no equity required.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How long does the application process take?</summary>
+        <p>You'll typically hear back within 48 hours of submitting your application, followed by a 20-minute screening call within the week if shortlisted.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can I apply if I don't have a registered company yet?</summary>
+        <p>Yes — our Pre-Incubation stage is designed exactly for this. You can apply with just an idea; we'll help you validate it before you need to register anything.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How does mentor matching work?</summary>
+        <p>After your screening call, our team matches you with a mentor based on your sector, stage, and specific challenge — not randomly assigned. See the <a href="mentors.html" style="color:var(--purple);font-weight:700;">Mentors page</a> for more.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do you support startups outside major cities?</summary>
+        <p>Yes — bridging this gap is one of our core objectives. We have member incubators and remote mentoring support across 15 states, including Tier-2 and Tier-3 cities.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How can my incubator or institution join the network?</summary>
+        <p>Use the Partnership Inquiry form on this page and select "Academic Partnership" or "Government Collaboration" — our partnerships team will reach out to discuss next steps.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo"><span class="nex">Joy</span><span class="gen">En</span></span>
+        <p>India's leading incubator association, connecting startups, mentors, and investors to build a world-class innovation ecosystem.</p>
+        <div class="social-links"><a href="#">𝕏</a><a href="#">in</a><a href="#">▶</a><a href="#">📸</a></div>
+      </div>
+      <div class="footer-col"><h5>Association</h5><a href="about.html">About Us</a><a href="network.html">Our Network</a><a href="programs.html">Programs</a><a href="events.html">Events</a></div>
+      <div class="footer-col"><h5>Support</h5><a href="mentors.html">Find a Mentor</a><a href="resources.html">Resources</a><a href="stories.html">Success Stories</a><a href="contact.html">Contact</a></div>
+      <div class="footer-col"><h5>Get Involved</h5><a href="contact.html">Join as Startup</a><a href="mentors.html">Become a Mentor</a><a href="contact.html">Partner With Us</a></div>
+      <div class="footer-col"><h5>Legal</h5><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Annual Report</a></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 JoyEn Incubator Association. All rights reserved.</p>
+      <p>Registered under Section 8 Company Act, MCA India.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  function handleForm(e) {
+    e.preventDefault();
+    document.getElementById('formSuccess').classList.add('visible');
+  }
+  function handlePartnership(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('button');
+    btn.textContent = '✅ Inquiry Sent!';
+    btn.style.background = '#22c55e';
+    btn.style.color = '#fff';
+    btn.style.borderColor = '#22c55e';
+    btn.disabled = true;
+  }
+</script>
+</body>
+</html>

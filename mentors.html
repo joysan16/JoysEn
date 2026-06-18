@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mentor Network — JoyEn Incubator Association</title>
+<meta name="description" content="Connect with 120+ expert mentors across SaaS, FinTech, AI/ML, growth, and more in the JoyEn mentor network." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,700&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo"><span class="nex">Joy</span><span class="gen">En</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="network.html">Network</a></li>
+      <li><a href="programs.html">Programs</a></li>
+      <li><a href="mentors.html" class="active">Mentors</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="stories.html">Stories</a></li>
+      <li><a href="contact.html" class="btn-nav">Join Now</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Mentor Network</span></div>
+    <h1>120+ experts ready to back you.</h1>
+    <p>Proven founders, CXOs, and domain specialists who give real, actionable guidance — not generic advice.</p>
+    <div class="hero-cta">
+      <a href="contact.html" class="btn btn-primary">Request a Mentor</a>
+      <a href="contact.html" class="btn btn-secondary">Become a Mentor</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-tag">How It Works</span>
+      <h2>Matched mentorship, not random advice</h2>
+    </div>
+    <div class="steps-row fade-in">
+      <div class="step-box"><div class="step-num">1</div><h4>Tell Us Your Need</h4><p>Share your sector, stage, and the specific challenge you're facing.</p></div>
+      <div class="step-box"><div class="step-num">2</div><h4>Get Matched</h4><p>Our team pairs you with a mentor whose expertise fits your exact need.</p></div>
+      <div class="step-box"><div class="step-num">3</div><h4>Meet Weekly</h4><p>Regular 1-on-1 calls, typically for 8-12 weeks depending on the engagement.</p></div>
+      <div class="step-box"><div class="step-num">4</div><h4>Track Progress</h4><p>Set milestones together and measure real outcomes, not just conversations.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-soft">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-tag">Meet the Mentors</span>
+      <h2>A directory built on real expertise</h2>
+    </div>
+
+    <div class="filter-tabs fade-in" style="justify-content:center;margin-bottom:2rem;" id="mentorTabs">
+      <button class="tab active" data-d="all" onclick="filterMentors('all')">All Domains</button>
+      <button class="tab" data-d="SaaS" onclick="filterMentors('SaaS')">SaaS</button>
+      <button class="tab" data-d="FinTech" onclick="filterMentors('FinTech')">FinTech</button>
+      <button class="tab" data-d="AI/ML" onclick="filterMentors('AI/ML')">AI/ML</button>
+      <button class="tab" data-d="Growth" onclick="filterMentors('Growth')">Growth</button>
+    </div>
+
+    <div class="mentor-grid fade-in" id="mentorGrid">
+      <div class="mentor-card" data-domains="Product GTM SaaS">
+        <div class="mentor-photo">RK</div>
+        <h4>Rajesh Kumar</h4>
+        <p class="mentor-title">SaaS & Product Strategy</p>
+        <div class="mentor-exp">Former VP, Zoho Corp · 15 yrs</div>
+        <div class="mentor-areas"><span>Product</span><span>GTM</span><span>SaaS</span></div>
+        <a href="contact.html" class="btn-sm">Request Mentor</a>
+      </div>
+      <div class="mentor-card" data-domains="FinTech Compliance B2B">
+        <div class="mentor-photo">AJ</div>
+        <h4>Ananya Joshi</h4>
+        <p class="mentor-title">FinTech & Regulatory</p>
+        <div class="mentor-exp">Ex-RBI Officer · SEBI Advisor</div>
+        <div class="mentor-areas"><span>FinTech</span><span>Compliance</span><span>B2B</span></div>
+        <a href="contact.html" class="btn-sm">Request Mentor</a>
+      </div>
+      <div class="mentor-card" data-domains="AI/ML Data Research">
+        <div class="mentor-photo">MS</div>
+        <h4>Mohan Sharma</h4>
+        <p class="mentor-title">AI/ML & Deep Learning</p>
+        <div class="mentor-exp">IIT Bombay PhD · Google AI</div>
+        <div class="mentor-areas"><span>AI/ML</span><span>Data</span><span>Research</span></div>
+        <a href="contact.html" class="btn-sm">Request Mentor</a>
+      </div>
+      <div class="mentor-card" data-domains="Growth D2C Brand">
+        <div class="mentor-photo">LP</div>
+        <h4>Lavanya Patel</h4>
+        <p class="mentor-title">Marketing & Growth</p>
+        <div class="mentor-exp">CMO, Nykaa · Growth Expert</div>
+        <div class="mentor-areas"><span>D2C</span><span>Growth</span><span>Brand</span></div>
+        <a href="contact.html" class="btn-sm">Request Mentor</a>
+      </div>
+      <div class="mentor-card" data-domains="SaaS Enterprise Sales">
+        <div class="mentor-photo">VK</div>
+        <h4>Vivek Kapoor</h4>
+        <p class="mentor-title">Enterprise Sales & SaaS</p>
+        <div class="mentor-exp">Ex-Salesforce India Head</div>
+        <div class="mentor-areas"><span>SaaS</span><span>Enterprise</span><span>Sales</span></div>
+        <a href="contact.html" class="btn-sm">Request Mentor</a>
+      </div>
+      <div class="mentor-card" data-domains="FinTech Funding VC">
+        <div class="mentor-photo">SD</div>
+        <h4>Shreya Desai</h4>
+        <p class="mentor-title">Venture Capital & Fundraising</p>
+        <div class="mentor-exp">Partner, Early-Stage VC Fund</div>
+        <div class="mentor-areas"><span>FinTech</span><span>Funding</span><span>VC</span></div>
+        <a href="contact.html" class="btn-sm">Request Mentor</a>
+      </div>
+      <div class="mentor-card" data-domains="AI/ML Product Strategy">
+        <div class="mentor-photo">KN</div>
+        <h4>Karthik Nair</h4>
+        <p class="mentor-title">AI Product Strategy</p>
+        <div class="mentor-exp">Founder, AI startup (acquired)</div>
+        <div class="mentor-areas"><span>AI/ML</span><span>Product</span><span>Strategy</span></div>
+        <a href="contact.html" class="btn-sm">Request Mentor</a>
+      </div>
+      <div class="mentor-card" data-domains="Growth Marketing Branding">
+        <div class="mentor-photo">PM</div>
+        <h4>Pooja Malhotra</h4>
+        <p class="mentor-title">Digital Marketing & Branding</p>
+        <div class="mentor-exp">CMO, D2C unicorn brand</div>
+        <div class="mentor-areas"><span>Growth</span><span>Marketing</span><span>Branding</span></div>
+        <a href="contact.html" class="btn-sm">Request Mentor</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta-banner fade-in">
+      <h2>Are you an industry expert?</h2>
+      <p>Share your knowledge with India's next generation of builders. Flexible time commitment, real impact.</p>
+      <a href="contact.html" class="btn btn-secondary">Apply to Mentor</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo"><span class="nex">Joy</span><span class="gen">En</span></span>
+        <p>India's leading incubator association, connecting startups, mentors, and investors to build a world-class innovation ecosystem.</p>
+        <div class="social-links"><a href="#">𝕏</a><a href="#">in</a><a href="#">▶</a><a href="#">📸</a></div>
+      </div>
+      <div class="footer-col"><h5>Association</h5><a href="about.html">About Us</a><a href="network.html">Our Network</a><a href="programs.html">Programs</a><a href="events.html">Events</a></div>
+      <div class="footer-col"><h5>Support</h5><a href="mentors.html">Find a Mentor</a><a href="resources.html">Resources</a><a href="stories.html">Success Stories</a><a href="contact.html">Contact</a></div>
+      <div class="footer-col"><h5>Get Involved</h5><a href="contact.html">Join as Startup</a><a href="mentors.html">Become a Mentor</a><a href="contact.html">Partner With Us</a></div>
+      <div class="footer-col"><h5>Legal</h5><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Annual Report</a></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 JoyEn Incubator Association. All rights reserved.</p>
+      <p>Registered under Section 8 Company Act, MCA India.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  function filterMentors(domain) {
+    document.querySelectorAll('#mentorTabs .tab').forEach(t => t.classList.toggle('active', t.dataset.d === domain));
+    document.querySelectorAll('#mentorGrid .mentor-card').forEach(card => {
+      const show = domain === 'all' || card.dataset.domains.includes(domain);
+      card.style.display = show ? '' : 'none';
+    });
+  }
+</script>
+</body>
+</html>
