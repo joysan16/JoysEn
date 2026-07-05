@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Contact & Membership — JoyEn Incubator Association</title>
-<meta name="description" content="Apply for membership, contact our team, or inquire about partnerships with JoyEn Incubator Association." />
+<title>Contact & Membership — NexGen Incubator Association</title>
+<meta name="description" content="Join as a startup, become a mentor, or partner with NexGen. Dedicated registration forms for every role." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,700&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="css/style.css" />
@@ -13,7 +13,7 @@
 
 <nav class="navbar" id="navbar">
   <div class="container nav-inner">
-    <a href="index.html" class="logo"><span class="nex">Joy</span><span class="gen">En</span></a>
+    <a href="index.html" class="logo"><span class="nex">Nex</span><span class="gen">Gen</span></a>
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -23,9 +23,9 @@
       <li><a href="events.html">Events</a></li>
       <li><a href="resources.html">Resources</a></li>
       <li><a href="stories.html">Stories</a></li>
-      <li><a href="contact.html" class="btn-nav active">Join Now</a></li>
+      <li><a href="contact.html" class="btn-nav">Join Now</a></li>
     </ul>
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
@@ -33,82 +33,336 @@
   <div class="container">
     <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Contact & Membership</span></div>
     <h1>Ready to join the ecosystem?</h1>
-    <p>Apply for membership, reach out to our team, or inquire about partnerships — we usually respond within 48 hours.</p>
+    <p>Whether you're a founder, expert, or organization — pick your role below and fill out the right form. We respond within 48 hours.</p>
   </div>
 </section>
 
-<!-- MEMBERSHIP + CONTACT -->
+<!-- REGISTRATION FORMS -->
 <section class="section">
   <div class="container">
-    <div class="contact-grid">
+    <div class="section-header fade-in">
+      <span class="section-tag">Membership Registration</span>
+      <h2>Choose your role to get started</h2>
+      <p>Three dedicated forms — each built for the right kind of member.</p>
+    </div>
 
-      <div class="form-box fade-in">
-        <h3>Membership Registration</h3>
-        <form id="membershipForm" onsubmit="handleForm(event)">
-          <div class="form-group"><label>Full Name *</label><input type="text" placeholder="Your name" required /></div>
-          <div class="form-group"><label>Email Address *</label><input type="email" placeholder="your@email.com" required /></div>
-          <div class="form-group"><label>Phone Number</label><input type="tel" placeholder="+91 XXXXX XXXXX" /></div>
-          <div class="form-group">
-            <label>I want to join as *</label>
-            <select required>
-              <option value="">Select role</option>
-              <option>Startup Founder</option>
-              <option>Mentor / Expert</option>
-              <option>Investor</option>
-              <option>Incubator Member</option>
-              <option>Corporate Partner</option>
-            </select>
+    <div style="max-width:780px;margin:0 auto;" class="fade-in">
+      <div class="reg-tabs">
+        <button class="reg-tab active" onclick="switchTab('startup')">🚀 Join as Startup</button>
+        <button class="reg-tab" onclick="switchTab('mentor')">🧠 Become a Mentor</button>
+        <button class="reg-tab" onclick="switchTab('partner')">🤝 Partner With Us</button>
+      </div>
+
+      <!-- STARTUP FORM -->
+      <div class="reg-panel active" id="panel-startup">
+        <div class="reg-form-box">
+          <h3 style="margin-bottom:.4rem;">Join as a Startup</h3>
+          <p style="font-size:.875rem;margin-bottom:1.8rem;">Apply for incubation, mentoring, and funding support. Free to apply.</p>
+          <form onsubmit="handleReg(event, 'startup')">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Startup Name *</label>
+                <input type="text" placeholder="e.g. AgroMind AI" required />
+              </div>
+              <div class="form-group">
+                <label>Founder Name *</label>
+                <input type="text" placeholder="Your full name" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Email Address *</label>
+                <input type="email" placeholder="founder@startup.com" required />
+              </div>
+              <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" placeholder="+91 XXXXX XXXXX" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Industry / Sector *</label>
+                <select required>
+                  <option value="">Select industry</option>
+                  <option>AgriTech</option>
+                  <option>FinTech</option>
+                  <option>HealthTech</option>
+                  <option>EdTech</option>
+                  <option>AI / ML</option>
+                  <option>CleanTech</option>
+                  <option>SaaS / B2B</option>
+                  <option>D2C / Consumer</option>
+                  <option>DeepTech / Hardware</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Startup Stage *</label>
+                <select required>
+                  <option value="">Select stage</option>
+                  <option>Idea / Pre-Prototype</option>
+                  <option>Prototype / MVP</option>
+                  <option>Early Revenue</option>
+                  <option>Growth Stage</option>
+                  <option>Series A+</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Website / Pitch Deck URL</label>
+                <input type="url" placeholder="https://yourstartup.com" />
+              </div>
+              <div class="form-group">
+                <label>Funding Status *</label>
+                <select required>
+                  <option value="">Select status</option>
+                  <option>Bootstrapped</option>
+                  <option>Friends & Family Round</option>
+                  <option>Angel Funded</option>
+                  <option>Seed Funded</option>
+                  <option>Series A+</option>
+                  <option>Looking for first funding</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>What support are you looking for?</label>
+              <textarea rows="3" placeholder="Describe your biggest challenge and what you need help with..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Submit Startup Application →</button>
+          </form>
+          <div class="form-success" id="success-startup">
+            <div class="success-icon">🚀</div>
+            <h4>Application Submitted!</h4>
+            <p>Our team will review your application and reach out within 48 hours to schedule a screening call.</p>
           </div>
-          <div class="form-group"><label>Startup / Organization Name</label><input type="text" placeholder="Company name (if applicable)" /></div>
-          <div class="form-group"><label>Tell us about yourself</label><textarea placeholder="Brief description of your background or startup idea..." rows="3"></textarea></div>
-          <button type="submit" class="btn btn-primary btn-full">Submit Application</button>
-        </form>
-        <div class="form-success" id="formSuccess">
-          <div class="success-icon">✅</div>
-          <h4>Application Received!</h4>
-          <p>We'll reach out within 48 hours. Welcome to the JoyEn ecosystem!</p>
         </div>
       </div>
 
-      <div>
-        <div class="contact-method fade-in">
-          <span class="ci-icon">📧</span>
-          <div><strong>General Inquiries</strong><p>hello@joyenincubator.in</p></div>
+      <!-- MENTOR FORM -->
+      <div class="reg-panel" id="panel-mentor">
+        <div class="reg-form-box">
+          <h3 style="margin-bottom:.4rem;">Become a Mentor</h3>
+          <p style="font-size:.875rem;margin-bottom:1.8rem;">Share your expertise with India's next generation of builders. Flexible time commitment.</p>
+          <form onsubmit="handleReg(event, 'mentor')">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Full Name *</label>
+                <input type="text" placeholder="Your full name" required />
+              </div>
+              <div class="form-group">
+                <label>Email Address *</label>
+                <input type="email" placeholder="your@email.com" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" placeholder="+91 XXXXX XXXXX" />
+              </div>
+              <div class="form-group">
+                <label>Current Organization</label>
+                <input type="text" placeholder="Company or institution" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Primary Domain of Expertise *</label>
+                <select required>
+                  <option value="">Select domain</option>
+                  <option>Product & Strategy</option>
+                  <option>Sales & GTM</option>
+                  <option>SaaS / B2B</option>
+                  <option>FinTech & Regulatory</option>
+                  <option>AI / ML / Data</option>
+                  <option>Marketing & Growth</option>
+                  <option>Fundraising & VC</option>
+                  <option>Legal & IP</option>
+                  <option>Operations & HR</option>
+                  <option>AgriTech / CleanTech</option>
+                  <option>HealthTech / MedTech</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Years of Experience *</label>
+                <select required>
+                  <option value="">Select range</option>
+                  <option>5 – 8 years</option>
+                  <option>8 – 12 years</option>
+                  <option>12 – 18 years</option>
+                  <option>18+ years</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>LinkedIn Profile URL *</label>
+              <input type="url" placeholder="https://linkedin.com/in/yourname" required />
+            </div>
+            <div class="form-group">
+              <label>How many hours per month can you commit?</label>
+              <select>
+                <option>2–4 hours / month</option>
+                <option>4–8 hours / month</option>
+                <option>8–12 hours / month</option>
+                <option>12+ hours / month</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Brief Bio / What you bring to founders</label>
+              <textarea rows="3" placeholder="Describe your background and the kind of founders you'd like to support..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Apply to Mentor →</button>
+          </form>
+          <div class="form-success" id="success-mentor">
+            <div class="success-icon">🧠</div>
+            <h4>Mentor Application Received!</h4>
+            <p>Our Head of Mentor Network will be in touch within 3 business days. Thank you for giving back!</p>
+          </div>
         </div>
-        <div class="contact-method fade-in">
+      </div>
+
+      <!-- PARTNER FORM -->
+      <div class="reg-panel" id="panel-partner">
+        <div class="reg-form-box">
+          <h3 style="margin-bottom:.4rem;">Partner With Us</h3>
+          <p style="font-size:.875rem;margin-bottom:1.8rem;">Co-host events, fund programs, or join as a member incubator. Let's build together.</p>
+          <form onsubmit="handleReg(event, 'partner')">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Organization Name *</label>
+                <input type="text" placeholder="Your company or institution" required />
+              </div>
+              <div class="form-group">
+                <label>Contact Person Name *</label>
+                <input type="text" placeholder="Full name" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Email Address *</label>
+                <input type="email" placeholder="contact@org.com" required />
+              </div>
+              <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" placeholder="+91 XXXXX XXXXX" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Partnership Type *</label>
+                <select required>
+                  <option value="">Select type</option>
+                  <option>Corporate Sponsorship</option>
+                  <option>Academic / University Partnership</option>
+                  <option>Government Collaboration</option>
+                  <option>Event Co-hosting</option>
+                  <option>Member Incubator Application</option>
+                  <option>Investor Partnership</option>
+                  <option>Media / PR Partnership</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Organization Type</label>
+                <select>
+                  <option>Corporate / MNC</option>
+                  <option>University / College</option>
+                  <option>Government Body</option>
+                  <option>Incubator / Accelerator</option>
+                  <option>VC / Investment Firm</option>
+                  <option>NGO / Foundation</option>
+                  <option>Media / Press</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Website</label>
+              <input type="url" placeholder="https://yourorg.com" />
+            </div>
+            <div class="form-group">
+              <label>Describe your partnership interest *</label>
+              <textarea rows="3" placeholder="What would you like to achieve through this partnership?" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Send Partnership Inquiry →</button>
+          </form>
+          <div class="form-success" id="success-partner">
+            <div class="success-icon">🤝</div>
+            <h4>Partnership Inquiry Sent!</h4>
+            <p>Our Partnerships Lead will contact you within 2 business days to discuss next steps.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GENERAL CONTACT + MAP + SOCIAL -->
+<section class="section section-soft">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-tag">General Contact</span>
+      <h2>Reach us directly</h2>
+    </div>
+    <div class="grid-2 fade-in" style="gap:2.5rem;align-items:start;">
+      <div>
+        <div class="contact-method">
+          <span class="ci-icon">📧</span>
+          <div><strong>General Inquiries</strong><p>hello@nexgenincubator.in</p></div>
+        </div>
+        <div class="contact-method">
           <span class="ci-icon">📞</span>
           <div><strong>Phone</strong><p>+91 80 4567 8900</p></div>
         </div>
-        <div class="contact-method fade-in">
+        <div class="contact-method">
           <span class="ci-icon">📍</span>
           <div><strong>Headquarters</strong><p>T-Hub, IIIT Hyderabad Campus,<br/>Gachibowli, Hyderabad — 500032</p></div>
         </div>
-
-        <div class="form-box fade-in" style="margin-top:1.5rem;box-shadow:var(--shadow-sm);">
-          <h3 style="font-size:1.15rem;">Partnership Inquiry</h3>
-          <p style="font-size:.85rem;margin-bottom:1.3rem;">Collaborate as a corporate sponsor, government body, or academic institution.</p>
-          <form onsubmit="handlePartnership(event)">
-            <div class="form-group"><input type="text" placeholder="Organization name" required /></div>
-            <div class="form-group"><input type="email" placeholder="Contact email" required /></div>
-            <div class="form-group">
-              <select>
-                <option>Corporate Sponsorship</option>
-                <option>Academic Partnership</option>
-                <option>Government Collaboration</option>
-                <option>Event Partnership</option>
-              </select>
-            </div>
-            <button type="submit" class="btn btn-secondary btn-full">Send Partnership Inquiry</button>
-          </form>
+        <div class="contact-method">
+          <span class="ci-icon">🕐</span>
+          <div><strong>Office Hours</strong><p>Monday – Friday, 9:00 AM – 6:00 PM IST</p></div>
+        </div>
+        <div style="background:#fff;border:1px solid var(--border);border-radius:var(--r-lg);padding:1.6rem;box-shadow:var(--shadow-sm);">
+          <h4 style="margin-bottom:1rem;">Follow Us</h4>
+          <div class="social-row">
+            <a href="#" class="social-pill">𝕏 Twitter</a>
+            <a href="#" class="social-pill">in LinkedIn</a>
+            <a href="#" class="social-pill">▶ YouTube</a>
+            <a href="#" class="social-pill">📸 Instagram</a>
+            <a href="#" class="social-pill">f Facebook</a>
+          </div>
         </div>
       </div>
-
+      <div>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.2698857534195!2d78.34893931487754!3d17.44594298804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93dc8c5d4a7b%3A0x4c5c72f2e6b4a8a0!2sT-Hub!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        <div style="background:#fff;border:1px solid var(--border);border-radius:var(--r-lg);padding:1.6rem;box-shadow:var(--shadow-sm);margin-top:1.25rem;">
+          <h4 style="margin-bottom:1.2rem;">Send a General Message</h4>
+          <form onsubmit="handleGeneral(event)">
+            <div class="form-group"><label>Name *</label><input type="text" placeholder="Your name" required /></div>
+            <div class="form-group"><label>Email *</label><input type="email" placeholder="your@email.com" required /></div>
+            <div class="form-group"><label>Subject</label><input type="text" placeholder="What's this about?" /></div>
+            <div class="form-group"><label>Message *</label><textarea rows="3" placeholder="Your message..." required></textarea></div>
+            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+          </form>
+          <div id="general-success" style="display:none;text-align:center;padding:1.5rem;">
+            <div style="font-size:2rem;margin-bottom:.5rem;">✅</div>
+            <p style="font-weight:700;">Message sent! We'll reply within 24 hours.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- FAQ -->
-<section class="section section-soft">
+<section class="section">
   <div class="container">
     <div class="section-header fade-in">
       <span class="section-tag">FAQ</span>
@@ -117,7 +371,7 @@
     <div style="max-width:680px;margin:0 auto;" class="fade-in">
       <details class="faq-item" open>
         <summary>Is there a cost to join as a startup?</summary>
-        <p>Pre-Incubation is completely free. The Incubation Program is equity-based (typically 2-5%), while Acceleration uses a performance-linked fee. Our Social Innovation track is grant-based with no equity required.</p>
+        <p>Pre-Incubation is completely free. The Incubation Program is equity-based (typically 2–5%), while Acceleration uses a performance-linked fee. The Social Innovation track is grant-based with no equity required.</p>
       </details>
       <details class="faq-item">
         <summary>How long does the application process take?</summary>
@@ -129,7 +383,7 @@
       </details>
       <details class="faq-item">
         <summary>How does mentor matching work?</summary>
-        <p>After your screening call, our team matches you with a mentor based on your sector, stage, and specific challenge — not randomly assigned. See the <a href="mentors.html" style="color:var(--purple);font-weight:700;">Mentors page</a> for more.</p>
+        <p>After your screening call, our team matches you with a mentor based on your sector, stage, and specific challenge — not randomly assigned. See the <a href="mentors.html" style="color:var(--purple);font-weight:700;">Mentors page</a> for more details.</p>
       </details>
       <details class="faq-item">
         <summary>Do you support startups outside major cities?</summary>
@@ -137,7 +391,7 @@
       </details>
       <details class="faq-item">
         <summary>How can my incubator or institution join the network?</summary>
-        <p>Use the Partnership Inquiry form on this page and select "Academic Partnership" or "Government Collaboration" — our partnerships team will reach out to discuss next steps.</p>
+        <p>Use the "Partner With Us" tab above and select "Member Incubator Application" as the partnership type. Our team will reach out to discuss the onboarding process.</p>
       </details>
     </div>
   </div>
@@ -147,7 +401,7 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <span class="logo"><span class="nex">Joy</span><span class="gen">En</span></span>
+        <span class="logo"><span class="nex">Nex</span><span class="gen">Gen</span></span>
         <p>India's leading incubator association, connecting startups, mentors, and investors to build a world-class innovation ecosystem.</p>
         <div class="social-links"><a href="#">𝕏</a><a href="#">in</a><a href="#">▶</a><a href="#">📸</a></div>
       </div>
@@ -157,7 +411,7 @@
       <div class="footer-col"><h5>Legal</h5><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Annual Report</a></div>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 JoyEn Incubator Association. All rights reserved.</p>
+      <p>© 2025 NexGen Incubator Association. All rights reserved.</p>
       <p>Registered under Section 8 Company Act, MCA India.</p>
     </div>
   </div>
@@ -165,18 +419,23 @@
 
 <script src="js/main.js"></script>
 <script>
-  function handleForm(e) {
-    e.preventDefault();
-    document.getElementById('formSuccess').classList.add('visible');
+  function switchTab(tab) {
+    document.querySelectorAll('.reg-tab').forEach((t,i) => {
+      const ids = ['startup','mentor','partner'];
+      t.classList.toggle('active', ids[i] === tab);
+    });
+    document.querySelectorAll('.reg-panel').forEach(p => p.classList.remove('active'));
+    document.getElementById('panel-' + tab).classList.add('active');
   }
-  function handlePartnership(e) {
+  function handleReg(e, type) {
     e.preventDefault();
-    const btn = e.target.querySelector('button');
-    btn.textContent = '✅ Inquiry Sent!';
-    btn.style.background = '#22c55e';
-    btn.style.color = '#fff';
-    btn.style.borderColor = '#22c55e';
-    btn.disabled = true;
+    e.target.style.display = 'none';
+    document.getElementById('success-' + type).style.display = 'block';
+  }
+  function handleGeneral(e) {
+    e.preventDefault();
+    e.target.style.display = 'none';
+    document.getElementById('general-success').style.display = 'block';
   }
 </script>
 </body>
